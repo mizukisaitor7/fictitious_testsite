@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- css -->
+  <link rel="stylesheet" href="style.css">
+  <!-- fontawesome -->
+  <script src="https://kit.fontawesome.com/2014b64af7.js" crossorigin="anonymous"></script>
+  <!-- googlefonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Meow+Script&family=Zen+Maru+Gothic&display=swap"
+    rel="stylesheet">
+  <title>イノコバデリ</title>
+</head>
+
+<body id="top">
+
+  <header class="site-header">
+    <div class="header-top">
+      <div class="header-inner">
+        <h1 class="logo">
+          <a href="index.html"><img src="img/logo.png" alt="イノコバデリ 猪子場食品の宅配サービス"></a>
+        </h1>
+
+        <div class="header-top-right">
+          <div class="user-actions">
+            <a href="#" class="btn-login"><i class="fa-solid fa-cart-shopping"></i>ご注文・ログイン</a>
+            <a href="#" class="link-text">お問い合わせ</a>
+            <a href="#" class="link-text">FAQ</a>
+          </div>
+          <!-- 検索フォーム -->
+          <form action="/search" method="GET" class="search-area">
+            <div class="search-input-container">
+              <input type="text" name="zipcode" placeholder="お届け先の郵便番号検索" class="input-field">
+              <button type="submit" class="btn-search-submit">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+            </div>
+
+            <p class="delivery-info">新潟・三条・長岡地域<br>配送承ります。</p>
+          </form>
+
+        </div>
+      </div>
+    </div>
+
+    <nav class="header-nav">
+
+      <!-- ハンバーガー格納用素材 -->
+      <input type="checkbox" id="nav-input" class="nav-unshown">
+
+      <label for="nav-input" class="hamburger-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <ul class="nav-list">
+        <li class="sp-only-actions">
+          <a href="#" class="btn-login-sp"><i class="fa-solid fa-cart-shopping"></i>ご注文・ログイン</a>
+          <div class="sp-sub-links">
+            <a href="#">お問い合わせ</a>
+            <a href="#">FAQ</a>
+          </div>
+        </li>
+        <!-- ここまで -->
+
+        <li><a href="index.html">ホーム</a></li>
+        <li><a href="#">はじめての方へ</a></li>
+        <li><a href="#" class="text-orange">ミールキット</a></li>
+        <li><a href="#" class="text-green">弁当・オードブル</a></li>
+        <li><a href="#">資料請求</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- main -->
+  <main>
+    <!-- kv -->
+    <div class="banner_container single_banner">
+      <div class="cp_banner">
+        <a href="#"><img src="img/banner06.png" alt="イノコバのミールキット5日間お試しキャンペーン"></a>
+      </div>
+      <p>イノコバのミールキット5日分を<span class="cp_text">お試しいただける特別セットを</span><span class="cp_text">ご用意いたしました！</span></p>
+    </div>
+
+    <!-- キャンペーン料金表 -->
+    <div class="fee_set_container">
+
+      <div class="fee_set">
+        <p><span>３</span>人用</p>
+        <img class="family" src="img/family_3.png" alt="">
+        <p>通常価格9,000円の商品が…</p>
+        <h4 class="cp-fee">
+          特別価格<br>
+          （送料込・税込）
+          <span class="discount_price">4,500円<img src="img/50%off.png"></span><br>
+        </h4>
+
+      </div>
+
+      <div class="fee_set">
+        <p><span>４</span>人用</p>
+        <img class="family" src="img/family_3.png" alt="">
+        <p>通常価格12,000円の商品が…</p>
+        <h4 class="cp-fee">
+          特別価格<br>
+          （送料込・税込）
+          <span class="discount_price">6,000円<img src="img/50%off.png"></span><br>
+        </h4>
+      </div>
+
+    </div>
+
+    <div class="weeklymenu">
+      <h2 class="sectiontitle">来週の献立</h2>
+
+      <div class="menu_container">
+        <div class="daymenu">
+          <img src="img/day1.jpg" alt="若鳥の照り焼き">
+          <div class="dayname">
+            <h5 class="mon">月曜</h5>
+          </div>
+          <ul>
+            <li>若鳥の照り焼き</li>
+            <li>小鉢</li>
+            <li>ミモザ風サラダ</li>
+          </ul>
+        </div>
+
+        <div class="daymenu">
+          <img src="img/day2.jpg" alt="ハンバーグ">
+          <div class="dayname">
+            <h5 class="tue">火曜</h5>
+          </div>
+          <ul>
+            <li>ハンバーグ</li>
+            <li>フライドポテト</li>
+            <li>具だくさんスープ</li>
+          </ul>
+        </div>
+
+        <div class="daymenu">
+          <img src="img/day3.jpg" alt="マイルド酢豚">
+          <div class="dayname">
+            <h5 class="wed">水曜</h5>
+          </div>
+          <ul>
+            <li>マイルド酢豚</li>
+            <li>小鉢</li>
+            <li>点心セット</li>
+          </ul>
+        </div>
+
+        <div class="daymenu">
+          <img src="img/day4.jpg" alt="チーズグラタン">
+          <div class="dayname">
+            <h5 class="thu">木曜</h5>
+          </div>
+          <ul>
+            <li>チーズグラタン</li>
+            <li>にんじんラペ</li>
+            <li>ミネストローネ</li>
+          </ul>
+        </div>
+
+        <div class="daymenu">
+          <img src="img/day5.jpg" alt="親子丼">
+          <div class="dayname">
+            <h5 class="fri">金曜</h5>
+          </div>
+          <ul>
+            <li>親子丼</li>
+            <li>小鉢</li>
+            <li>ごろっと豚汁</li>
+          </ul>
+        </div>
+      </div>
+
+      <h4 class="closing">
+        <img src="img/line01.png">
+        <span>3月6日</span>までのお申し込みで<span>3月9日</span>初回お届け！
+        <img src="img/line02.png">
+      </h4>
+
+      <div class="btn-purchase">
+       <a href="#"> 
+        今すぐ注文する
+        <i class="fa-solid fa-cart-shopping"></i>
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+
+  <!-- footer -->
+  <footer class="footer">
+
+    <div class="footer_inner">
+      <div class="footer_link">
+        <div class="mealkit_link">
+          <img class="footer_icon" src="img/mealkit_icon.png" alt="">
+          <p><span>イノコバの</span><br>ミールキット</p>
+        </div>
+        <div class="delivery_link">
+          <img class="footer_icon" src="img/deli_icon.png" alt="">
+          <p><span>イノコバの</span><br>お弁当・<br>オードブル</p>
+        </div>
+      </div>
+
+      <div class="footer_content">
+        <h1 class="footer_logo">
+          <div class="logo"><a href="index.html"><img src="img/logo.png" alt="イノコバデリ 猪子場食品の宅配サービス"></a></div>
+        </h1>
+
+        <div class="footer_adress">
+          <ul>
+            <li>猪子場食品株式会社</li>
+            <li>&#12306;959-1151</li>
+            <li>新潟県三条市猪子場新田109</li>
+            <li>&phone;0256-41-1300</li>
+            <li>代表　鹿野輿太</li>
+          </ul>
+        </div>
+
+        <div class="footer_nav">
+          <ul>
+            <li><a href="#"><i class="fa-solid fa-angle-right" style="color: #666666;"></i>個人情報保護について</a></li>
+            <li><a href="#"><i class="fa-solid fa-angle-right" style="color: #666666;"></i>特定商取引法に基づく表記</a></li>
+            <li><a href="#"><i class="fa-solid fa-angle-right" style="color: #666666;"></i>マイページ利用規程</a></li>
+            <li><a href="#"><i class="fa-solid fa-angle-right" style="color: #666666;"></i>イノコバデリ宅配規程</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer_sns">
+        <ul>
+          <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-line"></i></a></li>
+          <li><a href="#"><i class="fa-solid fa-arrow-up-from-bracket"></i></a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer_copyright">
+      <small>&copy; InocobaFoods All rights reserved.</small>
+    </div>
+    </div>
+
+  </footer>
+  <!-- 購入ボタン -->
+<a href="#" class="add-cart"><i class="fa-solid fa-cart-shopping"></i><br>今すぐ<br>ご注文</a>
+  <!-- toTOP -->
+  <a class="pagetop" href="#top"><i class="fa-solid fa-angle-up" style="color: #ffffff;"></i>
+    <p>TOP</p>
+  </a>
+
+</body>
+
+</html>

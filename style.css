@@ -1,0 +1,1490 @@
+@charset "utf-8";
+/* 基本設定 */
+body { margin: 0;
+  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", sans-serif;
+  background-color: #f4eee4;
+  background-image: url(img/background.png);
+  background-position: center;
+  background-repeat: repeat;
+  background-size: 100% auto;
+  /* background-attachment: fixed; */
+}
+ul { list-style: none; margin: 0; padding: 0; }
+a { text-decoration: none; color: #666666; }
+
+/* 特定の文字色 */
+.text-orange { color: #e67968; }
+.text-green { color: #199d6c; }
+
+/* ハンバーガーメニュー用チェックボックスを隠す */
+  .nav-unshown {
+    display: none;
+  }
+/* 通常時は以下の要素を隠す（ハンバーガーのときだけ表示する用) */
+.sp-only-actions {
+  display: none;
+}
+
+/* もっと見るボタン共通設定 */
+.btn-more {
+  border: 2px solid #d34c2a;
+  background-color: #d34c2a;
+  border-radius: 50px;
+  padding: 8px 15px;      /* 上下左右の余白をバランスよく調整 */
+  color: #fff;
+  width: 140px;           /* 少し幅を広げる */
+  text-align: center;     /* 中身のテキストとアイコンを中央に寄せます */
+}
+/* btn-pink共通設定 */
+.btn-pink {
+  border: 2px solid #e67968;
+  border-radius: 50px;
+  padding: 8px 15px;      /* 上下左右の余白をバランスよく調整 */
+  color: #e67968;
+  width: 140px;           /* 少し幅を広げる */
+  text-align: center;     /* 中身のテキストとアイコンを中央に寄せます */
+}
+.btn-pink:hover {
+  background-color: #e67968; 
+  color: #fff; 
+  cursor: pointer;           /* カーソルを指マークに */            
+}
+
+/* btn_green共通設定 */
+.btn-green {
+  border: 2px solid #199d6c;
+  border-radius: 50px;
+  padding: 8px 15px;      /* 上下左右の余白をバランスよく調整 */
+  color: #199d6c;
+  width: 140px;           /* 少し幅を広げる */
+  text-align: center;     /* 中身のテキストとアイコンを中央に寄せます */
+}
+.btn-green:hover {
+  background-color: #199d6c; 
+  color: #fff;
+  cursor: pointer;           /* カーソルを指マークに */                 
+}
+
+
+/* ヘッダーの設定 */
+/* pc */
+@media(width > 940px) {
+.site-header{
+  margin-bottom: 35px;
+}
+.header-inner {
+  max-width: 98%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* padding: 15px 20px; */
+}
+
+/* 上段のデザイン */
+.header-top { background-color: #fff; 
+            box-shadow: 0 4px 4px rgba(0,0,0,0.1);}
+
+.header-top-right { display: flex; align-items: center; gap: 20px; }
+
+.user-actions { display: flex; align-items: center; gap:20px; }
+
+.logo img{
+    height: 50px;
+}
+
+.btn-login {
+  border: 2px solid #d34c2a;
+  border-radius: 50px;
+  padding: 8px 25px;
+  color: #d34c2a;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+.btn-login:hover {
+  background-color: #d34c2a;
+  color: #fff;
+  cursor: pointer;           /* カーソルを指マークに */  
+  transform: translateY(-2px); /* 少し上に浮き上がる演出*/
+  transition: all 0.3s ease;  /* 変化をなめらかにする */
+}
+
+.link-text { color: #007c5a; font-weight: bold; font-size: 16px; }
+
+.search-area {
+  display: flex;
+  align-items: center; 
+  gap: 10px;          
+}
+
+.search-input-container {
+  display: flex;
+  align-items: center;
+  background-color: #d1e8de;
+  border: 2px solid #007c5a;
+  padding: 8px 10px;
+}
+
+/* 入力エリアのスタイル調整 */
+.input-field {
+  background: transparent; /* 背景を透過 */
+  border: none;
+  outline: none;
+  font-size: 12px;
+  color: #007c5a;
+  width: 130px; /* コンテナ幅 */
+}
+
+/* プレースホルダーの色 */
+.input-field::placeholder {
+  color: #007c5a;
+}
+
+/* 虫眼鏡ボタンのスタイル */
+.btn-search-submit {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding-left: 5px;
+  color: #007c5a;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+
+.delivery-info {
+  font-size: 11px;
+  color: #333;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* 下段（ナビゲーション）のデザイン */
+.header-nav {
+  max-width: 1000px;
+  margin: -10px auto 0; /* 上段に少し食い込ませる場合 */
+  background-color: #fff;
+  border-radius: 0 0 30px 30px; /* 下側を角丸に */
+  box-shadow: 0 4px 4px rgba(0,0,0,0.1);
+  position: relative;
+  z-index: 10;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  height: 70px;
+}
+
+.nav-list li a {
+  padding: 10px 20px;
+  font-weight: bold;
+  /* font-size: 16px; */
+}
+/* navにマウスオーバーした時赤色にする */
+.nav-list :hover{
+  color: #d34c2a;
+}
+
+/* お試しボタン */
+.nav-trial img {margin:0 20px; height: 50px; display: block;}
+.nav-trial :hover{margin:0 12.7px; height: 54px;}
+
+}
+
+/* mobile */
+@media(max-width: 940px) {
+    /* ヘッダーのデザイン */
+    .header-top { background-color: #fff; 
+            box-shadow: 0 4px 4px rgba(0,0,0,0.1);}
+    .logo {
+    margin: 0;
+    padding: 20px 10px 10px;}
+    .logo img{
+    height: 50px;}
+
+  /* ハンバーガーボタンの基本設定 */
+  .hamburger-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 44px;
+    height: 44px;
+    background: #007c5a;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 100;
+  }
+
+  .hamburger-btn span {
+    position: absolute;
+    left: 11px;
+    width: 22px;
+    height: 2px;
+    background: #fff;
+    transition: 0.3s;
+  }
+  .hamburger-btn span:nth-child(1) { top: 14px; }
+  .hamburger-btn span:nth-child(2) { top: 21px; }
+  .hamburger-btn span:nth-child(3) { top: 28px; }
+
+  /* メニュー本体（初期状態は画面外） */
+  .nav-list {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%; /* 画面いっぱい */
+    height: 100vh;
+    background: #fff;
+    flex-direction: column;
+    justify-content: center;
+    transition: 0.5s;
+    z-index: 90;
+    margin: 0; /* PC版のマージンをリセット */
+    border-radius: 0; /* PC版の角丸をリセット */
+  }
+
+  /* チェックが入ったら、メニューを右から出す */
+  #nav-input:checked ~ .nav-list {
+    right: 0;
+  }
+
+  /* チェックが入ったら、三本線を「×」にする */
+  #nav-input:checked ~ .hamburger-btn span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+  #nav-input:checked ~ .hamburger-btn span:nth-child(2) {
+    opacity: 0;
+  }
+  #nav-input:checked ~ .hamburger-btn span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  /* リスト項目の調整 */
+  .nav-list li {
+    width: 100%;
+    text-align: center;
+  }
+  .nav-list li a {
+    display: block;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .nav-list :hover{
+  color: #d34c2a;
+}
+  /* お試しボタン */
+    .nav-trial img {
+    margin:0 20px;
+    height: 50px;}
+
+  /* PC用の上段右側を非表示にする */
+  .header-top-right {
+    display: none;
+  }
+
+  /* ハンバーガー内のスマホ用アクションを表示 */
+  .sp-only-actions {
+    display: block;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+    /* ログインボタン */
+    .btn-login-sp {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+
+    /* 幅をテキストに合わせる設定 */
+    width: fit-content; 
+    margin: 0 auto 15px; /* 上下0、左右autoで中央寄せ、下に15pxの余白 */
+    
+    background: #fff;
+    border: 2px solid #d34c2a;
+    border-radius: 50px;
+    color: #d34c2a;
+    font-weight: bold;
+    padding: 8px 25px !important; /* 左右の余白 */
+  }
+   .btn-login-sp:hover {
+  background-color: #d34c2a;
+  color: #fff;
+  cursor: pointer;           /* カーソルを指マークに */  
+  transform: translateY(-2px); /* 少し上に浮き上がる演出*/
+  transition: all 0.3s ease;  /* 変化をなめらかにする */
+}
+
+  .sp-sub-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 16pt;
+  }
+
+  .sp-sub-links a {
+    font-size: 14px !important;
+    color: #007c5a !important;
+    padding: 5px !important;
+  }
+
+  /* ナビゲーションの配置調整 */
+  .nav-list {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+    display: flex; /* flexを維持 */
+    flex-direction: column;
+    justify-content: flex-start; /* 上詰めにする */
+    padding-top: 60px; /* ボタンと重ならないよう余白 */
+    overflow-y: auto; /* メニューが長い場合にスクロール可能に */
+    transition: 0.5s;
+    z-index: 90;
+  }
+}
+
+/* フッターの設定 */
+/* pc */
+@media(width > 940px) {
+.footer{
+  background-color: #fff;
+}
+.footer_inner{
+  padding: 30px 0;
+}
+.footer_content{
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  margin: 20px 0;
+}
+.footer_link{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  /* align-items: stretch; */
+}
+.footer_link p{
+  /* flex-grow: 1; */
+  margin: 0;
+  font-size: 1.1rem;
+}
+.footer_link span{
+  font-size: 0.8rem;
+}
+.mealkit_link{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  border: 3px solid #e67968;
+  border-radius: 20px;
+  padding: 8px 15px;
+  color: #e67968;
+  font-weight: bold;
+  background-color: #fff;
+}
+.delivery_link{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  border: 3px solid #199d6c;
+  border-radius: 20px;
+  padding: 8px 20px;
+  color: #199d6c;
+  font-weight: bold;
+  background-color: #fff;
+}
+.footer_icon{
+  width: 45px;
+  height: 45px;
+}
+.footer_adress{
+  color: #d34c2a;
+}
+.footer_sns ul{
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 30px;
+  font-size: 1.8rem;
+}
+.footer_copyright{
+  text-align: center;
+  padding: 10px 0 20px 0;
+}
+
+}
+
+/* mobile */
+@media(max-width: 940px) {
+.footer{
+  background-color: #fff;
+}
+.footer_inner{
+  padding: 30px 0 15px 0;
+}
+.footer_content{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 30px;
+  flex-direction: column;
+  text-align: center;
+}
+
+.footer_link{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.footer_link p{
+  margin: 0;
+  font-size: 0.8rem;
+}
+.footer_link span{
+  font-size: 0.6rem;
+}
+.mealkit_link{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  border: 3px solid #e67968;
+  border-radius: 20px;
+  padding: 8px 10px;
+  color: #e67968;
+  font-weight: bold;
+  background-color: #fff;
+}
+.delivery_link{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  border: 3px solid #199d6c;
+  border-radius: 20px;
+  padding: 8px 15px;
+  color: #199d6c;
+  font-weight: bold;
+  background-color: #fff;
+}
+.footer_icon{
+  width: 45px;
+  height: 45px;
+}
+.footer_adress{
+  color: #d34c2a;
+  padding-bottom: 10px;
+  text-align: center;
+}
+.footer_adress ul{
+  display: inline-block;
+  text-align: left;
+}
+.footer_nav{
+  text-align: center;
+}
+.footer_nav ul{
+  display: inline-block;
+  text-align: left;
+}
+.footer_sns ul{
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 30px;
+  font-size: 1.8rem;
+}
+.footer_copyright{
+  text-align: center;
+  margin: 20px 0 0 0;
+}
+
+
+}
+
+/* トップに戻るボタンの設定(共通） */
+html {
+    scroll-behavior: smooth;
+}
+.pagetop {
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    background: #d34c2a;
+    border: solid 2px #d34c2a;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction:column;
+    /* column-gap:0; */
+    align-items: center;
+    z-index: 2;
+}
+.pagetop p{
+  margin: 0;
+  color: #fff;
+  font-size: 0.7rem;
+}
+/* ホバー時に色を変更 */
+@media (hover: hover) and (pointer: fine) {
+    .pagetop:hover, .pagetop:hover .pagetop__arrow {
+        background-color: #e67968;
+        border-color: #e67968;
+    }
+}
+
+
+/* frontpage */
+/* キービジュアルバナーのスライダー設定 */
+/* 全体設定 */
+/* pc */
+@media(width > 940px) {
+.css-carousel-slider {
+  /* サイズ設定をする場合はここ(*1) */
+    max-width: 1000px;
+    overflow: hidden;
+    position: relative;
+    /* 中央寄せ */
+    margin: auto;
+    display: block;
+}
+.css-carousel-slider img {
+    width: 100%;
+    height: auto;
+    vertical-align: top;
+}
+}
+/* mobile */
+@media(max-width: 940px) {
+  .css-carousel-slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.css-carousel-slider img {
+    width: 100%;
+    height: auto;
+    vertical-align: top;
+}
+}
+
+
+/* スライド設定 */
+.css-carousel-slider .slide-wrap {
+    width: 400%; /* 画像の合計数*100%を設定(*2) */
+    position: absolute;
+    display: flex;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    animation: css-carousel-slider 35s infinite; /* スライダーアニメーション全体の時間(*3) */
+    animation-delay: 3s; /* スライダーが始まるまでの時間(*4) */
+    justify-content: center;
+}
+.css-carousel-slider .slide-wrap-main {
+    width: 100%;
+    z-index: 1;
+    animation: css-carousel-slider-main 35s infinite; /* (*3)と同じ内容を設定 */
+    animation-delay: 3s; /* (*4)と同じ内容を設定 */
+}
+.css-carousel-slider .slide {
+    width: 100%;
+}
+
+/* スライダーアニメーションの設定(*5) */
+@keyframes css-carousel-slider {
+    0% { transform: translateX(0); }
+
+    20% { transform: translateX(calc(1 / 4 * -100%)); }
+    25% { transform: translateX(calc(1 / 4 * -100%)); }
+
+    45% { transform: translateX(calc(2 / 4 * -100%)); }
+    50% { transform: translateX(calc(2 / 4 * -100%)); }
+
+    70% { transform: translateX(calc(3 / 4 * -100%)); }
+    75% { transform: translateX(calc(3 / 4 * -100%)); }
+
+    95% { transform: translateX(calc(4 / 4 * -100%)); }
+    100% { transform: translateX(calc(4 / 4 * -100%)); }
+}
+
+@keyframes css-carousel-slider-main {
+    0% { transform: translateX(100%); }
+    75% { transform: translateX(100%); }
+    95% { transform: translateX(0%);}
+}
+
+/* カード型アイテムの設定 */
+.menu{
+  margin: 40px 20px 20px;
+}
+.card_container{
+  display: grid;
+  grid-template-columns: 350px 350px;
+  gap: 30px;
+  justify-content: center;
+}
+
+.card{
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 4px rgba(0,0,0,0.1);
+  padding: 20px 35px;
+  margin: 20px 0;
+}
+
+.card_subtitle{
+  text-align: center;
+}
+.card_subtitle h3{
+  font-size: 1.3rem;
+  font-family: "Zen Maru Gothic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0;
+}
+.card_subtitle span{
+  margin: 0 5px;
+}
+.card_title.meal_title{
+  text-align: center;
+  color: #e67968;
+  font-size: 1.8rem;
+  margin-top: 0;
+}
+.card_title.deli_title{
+  text-align: center;
+  color: #199d6c;
+  font-size: 1.8rem;
+  margin-top: 0;
+}
+.card_pic{
+  text-align: center;
+}
+/* テキストボックスは中央に寄せつつ文章は左揃え */
+.card_content{
+ text-align: center;
+}
+.text{
+  display: inline-block;
+  text-align: left;
+}
+.card_tag_container{
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+.card_tag{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 0.8rem;
+}
+/* タグの色設定 */
+.tag{
+  padding: 0 10px;
+  background-color: #f4eee4;
+  border-radius: 10px;
+  color: #e67968;
+}
+.card_btn {
+  display: flex;
+  flex-direction: column; /* 縦に並べる */
+  align-items: center;    /* 中央に寄せる */
+  gap: 15px;             /* ボタン同士の隙間（お好みで調整） */
+  margin-top: 20px;       /* 上のコンテンツとの余白 */
+}
+
+/* もっと見るボタンの色変更（共通設定はファイル最上部に記述あり） */
+/* btncolor1=オレンジ寄りのピンク */
+.btn-more.btncolor1{
+  background-color: #e67968;
+  border-color: #e67968;
+}
+.btn-more.btncolor1:hover {
+  background-color: #d34c2a;
+  border-color: #d34c2a; 
+  color: #fff;
+  cursor: pointer;                
+}
+/* btncolor2=緑 */
+.btn-more.btncolor2{
+  background-color: #199d6c;
+  border-color: #199d6c;
+}
+.btn-more.btncolor2:hover {
+  background-color: #d34c2a;
+  border-color: #d34c2a; 
+  color: #fff;               
+}
+/* btncolor3=青みピンク */
+.btn-more.btncolor3{
+  color: #f36299;
+  background-color: #fff;
+  border-color: #f36299;
+}
+.btn-more.btncolor3:hover {
+  background-color: #f36299;
+  border-color: #f36299; 
+  color: #fff;
+  cursor: pointer;                
+}
+/* btncolor4=オレンジ */
+.btn-more.btncolor4{
+  color: #fd9066;
+  background-color: #fff;
+  border-color: #fd9066;
+}
+.btn-more.btncolor4:hover {
+  background-color: #fd9066;
+  border-color: #fd9066; 
+  color: #fff;
+  cursor: pointer;                
+}
+/* btncolor5=オレンジ寄りのピンクその２ */
+.btn-more.btncolor5{
+  color: #e67968;
+  background-color: #fff;
+  border-color: #e67968;
+}
+.btn-more.btncolor5:hover {
+  background-color: #e67968;
+  border-color: #e67968; 
+  color: #fff; 
+  cursor: pointer;               
+}
+/* btncolor6=赤、透過 */
+.btn-more.btncolor6{
+  color: #d34c2a;
+  background-color: #fff;
+  border-color: #d34c2a;
+}
+.btn-more.btncolor6:hover {
+  background-color: #d34c2a;
+  border-color: #d34c2a; 
+  color: #fff; 
+  cursor: pointer;               
+}
+
+
+/* mobile */
+@media(max-width: 940px) {
+  .card_container {
+    /* grid-template-columns を 1列(1fr) に変更 */
+    grid-template-columns: 1fr;
+    /* カード最大幅を指定 */
+    max-width: 350px;
+    margin: 0 auto;
+  }
+
+  .card {
+    padding: 20px 20px;
+  }
+}
+
+/* コンセプトの設定 */
+.sectiontitle{
+  text-align: center;
+  color: #e67968;
+  padding: 40px 0 10px;
+}
+.text-smallpink{
+  color: #e67968;
+  font-size: 1rem;
+  font-weight: normal;
+}
+.text-gray{
+  color: #666666;
+  font-size: 1rem;
+  font-family: "Zen Maru Gothic", sans-serif;
+  font-weight: 400;
+  font-style: normal
+}
+.concept_pic_container{
+  display: grid;
+  grid-template-columns: 350px 350px;
+  gap: 30px;
+  justify-content: center;
+}
+.concept_pic{
+  max-width: 350px;
+  height: auto;
+}
+/* mobile */
+@media(max-width: 940px) {
+  .concept_pic_container{
+    grid-template-columns: 1fr;
+    max-width: 350px;
+    margin: 0 auto;
+  }
+}
+
+/* ミールキットメニューの設定 */
+
+/* メニューカード本体の設定 */
+.meal_menu{
+  margin-bottom: 60px;
+}
+.card_container.mealkit_card{
+  display: grid;
+  grid-template-columns: 280px 280px 280px;
+  gap: 30px;
+  justify-content: center;
+}
+.card_set{
+  display: flex;
+  align-items: center; 
+  flex-direction: column;
+  margin-top: 10px;
+}
+.card_set .card{
+  padding:20px 25px;
+}
+
+/*レビューの吹き出し*/
+.review{
+  padding: 0;
+}
+.balloon {
+  position: relative;
+  background: #fff;
+  padding: 2em 1rem 1rem;
+  margin-top: 20px; 
+  border-radius: 20px;
+  width: 240px;
+}
+/* 上向きの三角形 */
+.balloon:after {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 50%;     /* 中央寄せの起点 */
+  transform: translateX(-50%); /* 自身の幅の半分戻して完全に中央へ */
+  width: 0;
+  height: 0;
+  border-style: solid;
+  /* 三角形本体 */
+  border-color: transparent transparent #fff transparent;
+  border-width: 0 20px 20px 20px;
+}
+/* レビューのコンテンツ */
+.course_subtitle{
+  text-align: center;
+  letter-spacing: 0.3rem;
+  font-family: "Zen Maru Gothic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0;
+}
+.course_title{
+  text-align: center;
+  margin-top: 0.1rem;
+}
+/* 色設定 */
+.titlecolor1{
+  color: #f36299;
+}
+.subtitlecolor1{
+  background-color: #fde0eb;
+  display: inline;
+}
+.titlecolor2{
+  color: #fd9066;
+}
+.subtitlecolor2{
+  background-color: #ffe9e0;
+  display: inline;
+}
+.titlecolor3{
+  color: #e67968;
+}
+.subtitlecolor3{
+  background-color: #fae4e1;
+  display: inline;
+}
+
+/* ここまで */
+.review_title{
+  text-align: center;
+  margin: 0;
+}
+.review_title h4{
+  margin: 0;
+}
+.review_title small{
+  font-family: "Meow Script";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.2rem;
+  color: #e67968;
+}
+.Customer{
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+.Customer img{
+  width: 40px;
+  height: 40px;
+}
+.review_content{
+  margin: 0 30px;
+}
+/* mobile */
+@media(max-width: 940px) {
+  .card_container.mealkit_card {
+    /* grid-template-columns を 1列(1fr) に変更 */
+    grid-template-columns: 1fr;
+    /* カード最大幅を指定 */
+    max-width: 350px;
+    margin: 0 auto;
+  }
+}
+
+/* 料金プラン設定 */
+.fee{
+  background-color: #fffad9;
+  padding:0 0 60px;
+  margin-bottom: 60px;
+}
+.fee_innner{
+  text-align: center;
+}
+.fee_set_container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(300px, 400px)); /* 2カラム */
+  gap: 80px;             
+  justify-content: center; 
+  max-width: 1000px;
+  margin: 0 auto;         /* コンテナ自体を画面中央に配置 */
+  padding: 0 20px;        /* 画面端との余白 */
+}
+.fee h4{
+  font-size: 1.2rem;
+  color: #666666;
+}
+.fee_red{
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #d34c2a;
+}
+.fee_red span{
+  font-size: 2rem;
+}
+.fee_red img{
+  margin: 0 10px;
+}
+.fee_set {
+  text-align: center;
+  flex: 1;
+  max-width: 400px;
+}
+
+.fee_set p span {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #666;
+}
+/* 家族の画像のサイス設定 */
+.family{
+  height: 200px;
+  width: auto;
+}
+/* 料金表全体のレイアウト */
+.pricelist {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 20px;
+  margin-top: 15px;
+}
+
+.price_item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 120px;
+}
+
+/* 「週◯日」のラベル */
+.price_label {
+  background-color: #e6e6e6;
+  border-radius: 15px;
+  padding: 2px 25px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* 金額 */
+.price_val {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.text-red {
+  color: #d34c2a;
+}
+
+/* おトク！タグ（矢印デザイン） */
+.discount_tag {
+  color: #fff;
+  font-size: 1.2rem;
+  letter-spacing: -0.05em;
+  padding: 3px 5px;
+  margin-top: 5px;
+  position: relative;
+  font-weight: bold;
+  white-space: nowrap;
+}
+.discount_bold{
+  font-size: 1.4rem;
+  letter-spacing: 0.1em;
+}
+.tagcolor1{
+  background-color: #e67968;
+}
+.tagcolor2{
+  background-color: #d34c2a;
+}
+
+/* 矢印の先端部分 */
+.discount_tag.tagcolor1::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -17px;
+  border-top: 17px solid transparent; /* タグの高さに合わせて調整 */
+  border-bottom: 17px solid transparent;
+  border-left: 17px solid #e67968;
+}
+.discount_tag.tagcolor2::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -17px;
+  border-top: 17px solid transparent; /* タグの高さに合わせて調整 */
+  border-bottom: 17px solid transparent;
+  border-left: 17px solid #d34c2a;
+}
+/* 料金プラン下のボタンエリアの設定 */
+.fee_btn {
+  display: flex;  
+  justify-content: center; 
+  margin-top: 40px;      
+}
+
+/* ボタン自体の幅と見た目の調整 */
+.btn-more.btncolor6 {
+  display: block;
+  width: 180px;           /* ボタンの横幅*/
+  font-weight: bold;    
+  text-align: center;
+}
+
+/* mobile */
+@media(max-width: 940px) {
+  .fee_set_container {
+    grid-template-columns: 1fr; /* 1列に変更 */
+    gap: 40px;
+    max-width: 400px; /* スマートフォンで広がりすぎないように制限 */
+  }
+}
+
+
+/* キャンペーンバナー */
+.banner_container {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  padding: 0 20px;          
+  box-sizing: border-box;
+}
+.cp_banner {
+  width: 100%;
+  max-width: 900px;       /* 画像幅 */
+}
+.cp_banner img {
+  width: 100%;            
+  height: auto;           /* 比率を維持 */
+  display: block;         /* 下部の隙間を消す */
+}
+
+/* 配送エリアの設定 */
+.area{
+  background-color: #fff;
+  margin: 60px 0;
+}
+.area_container{
+ display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  justify-content: center;
+}
+.area_map{
+  text-align: right;
+}
+.area_map img{
+  max-width: 400px;
+  height: auto;
+}
+.area_text{
+  display: flex;
+  flex-direction: column; 
+  gap: 30px;
+  width: 100%;
+  padding: 20px;          
+  box-sizing: border-box;
+}
+.area_title{
+  color: #e67968;
+  margin-bottom: 10px;}
+.area_deli span{
+  font-weight: bold;
+}
+/* 配送エリアのボタンのみを中央に配置 */
+.area_deli .btn-tel {
+  display: block;
+  margin: 20px 0 0 100px;
+  width: 140px;  
+  text-align: center;
+}
+
+.area_deli {
+  text-align: left;
+}
+
+/* mobile */
+@media(max-width: 940px) {
+  .area{
+    padding: 40px 0;
+  }
+  .area_container {
+    /* grid-template-columns を 1列(1fr) に変更 */
+    grid-template-columns: 1fr;
+    /* カード最大幅を指定 */
+    max-width: 350px;
+    margin: 0 auto;
+  }
+}
+/* コラム記事バナーの設定  */
+.banner_container_2{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+}
+.column_banner img{
+width: 450px ;
+height: auto;
+}
+/* mobile */
+@media(max-width: 940px) {
+ .banner_container_2{ flex-direction: column;}
+}
+
+/* 新着情報の設定 */
+.newsList {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 80px;
+}
+
+dl {
+  width: 1000px;
+  /* ブロック要素を中央に配置 */
+  margin: 0 auto; 
+  overflow: hidden; 
+}
+
+dt {
+  color: #666666;
+  border-bottom: 1px solid #ccc;
+  float: left;
+  padding: 10px 5px;
+  width: 250px; 
+}
+
+dd {
+  border-bottom: 1px solid #ccc;
+  /* floatしたdtの幅に合わせて調整 */
+  margin-left: 250px; 
+  padding: 10px 5px;
+}
+
+.new_news{
+  background-color:#d34c2a;
+  border-radius:20px;
+  color:#fff;
+  margin:0 20px;
+  padding:2px 15px;
+  text-decoration:none;
+}
+.new_menu{
+  background-color: #ff931e;
+  border-radius:20px;
+  color:#fff;
+  margin:0 20px;
+  padding:2px 15px;
+  text-decoration:none;
+}
+.new_column{
+  background-color: #199d6c;
+  border-radius:20px;
+  color:#fff;
+  margin:0 20px;
+  padding:2px 23px;
+  text-decoration:none;
+}
+/* mobile */
+@media (max-width: 940px) {
+  /* 親要素の幅を画面に合わせる */
+  dl {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  /* dtの横並び（float）を解除して横幅いっぱいに */
+  dt {
+    float: none;
+    width: 100%;
+    border-bottom: none; /* 日付の下の線を消す */
+    padding-bottom: 0;   /* ddとの行間 */
+  }
+
+  /* ddの左余白を消して横幅いっぱいに */
+  dd {
+    width: 100%;
+    margin-left: 0;
+    padding-top: 5px;    /* dtとの行間 */
+    padding-bottom: 15px; /* リスト項目ごとの区切り */
+  }
+
+  /* ラベルの右余白 */
+  .new_news, .new_menu, .new_column {
+    margin: 0 0 0 10px;
+  }
+}
+
+/* フェードインアニメーション */
+#animation {
+  animation: fade-in 3s;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+
+}
+
+#poyopoyo{
+    animation: poyopoyo 2s ease-out infinite;
+  opacity: 1;
+}
+@keyframes poyopoyo {
+  0%, 40%, 60%, 80% {
+    transform: scale(1.0);
+  }
+  50%, 70% {
+    transform: scale(0.95);
+  }
+}
+
+/* 2ページ目の設定 */
+.cp-fee{
+  color: #d34c2a;
+}
+.discount_price{
+  color: #d34c2a;
+  font-size: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  gap: 10px;
+  margin-right: 45px;
+  line-height:1rem
+}
+.weeklymenu{
+  text-align: center;
+  margin-bottom: 80px;
+}
+.menu_container{
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 60px;
+}
+.dayname{
+  text-align: center;
+  font-size: 1.2rem;
+  background-color: #fff;
+  border: #fff;
+  border-radius: 20px;
+  width: 170px;
+}
+.dayname h5{
+margin: 10px;
+}
+.menu_container img{
+  width: 170px;
+  height: auto;
+  border-radius: 20px;
+}
+.menu_container ul {
+  list-style: none;
+}
+.menu_container li {
+  text-align: left;
+  text-indent: -1em;
+  padding-left: 1em;
+}
+.menu_container li::before {
+  content: '・';
+}
+.mon{
+  color: #93278f;
+}
+.tue{
+  color: #ff1d25;
+}
+.wed{
+  color: #3fa9f5;
+}
+.thu{
+  color: #7ac943;
+}
+.fri{
+  color: #ff931e;
+}
+.closing{
+  color: #666666;
+}
+.closing span{
+  font-size: 1.5rem;
+  margin: 10px;
+}
+.btn-purchase {
+  font-size: 1.2rem;
+  border: 2px solid #d34c2a;
+  background-color: #d34c2a;
+  border-radius: 50px;
+  padding: 2px 15px;
+  width: 220px;
+  padding: 8px 0;
+  margin: auto;
+}
+.btn-purchase a{
+  margin: 0;
+  color: #fff;
+}
+
+/* ホバー時の背景色と挙動の設定 */
+.btn-purchase:hover {
+  background-color: #e67968;
+  border-color: #e67968;
+  cursor: pointer;           /* カーソルを指マークに */
+  transform: translateY(-2px); /* 少し上に浮き上がる演出*/
+  transition: all 0.3s ease;  /* 変化をなめらかにする */
+}
+
+/* ボタン内の文字色が変わらないように固定（必要に応じて） */
+.btn-purchase:hover a {
+  color: #fff;
+}
+
+/* mobile */
+@media(max-width: 940px) {
+  .single_banner{
+    margin-top: 0;
+    padding: 0;
+  }
+  .single_banner p{
+    max-width: 90%;
+    text-align: center;
+  }
+  .cp_text{
+ content:"\A";
+ white-space:pre;
+  }
+ .menu_container {
+  flex-direction:column;
+  gap: 40px;
+  }
+  .closing{
+    font-size: 0.7rem;
+  }
+  .closing span{
+    font-size: 1rem;
+    margin: 0;
+  }
+}
+
+/* 「今すぐ注文」ボタン */
+.add-cart {
+  position: fixed;
+  right: 30px;
+  bottom: 120px;
+  z-index: 100;
+  
+  /* ボタンサイズ */
+  width: 100px;
+  height: 100px;
+  
+  /* 配色と装飾 */
+  background: #fff;
+  color: #d34c2a;
+  border:2px solid #d34c2a;
+  border-radius: 50%;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  
+  /* テキスト配置 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 1.2;
+  transition: transform 0.3s ease;
+  
+  /* アニメーションの追加 */
+  animation: floating 3s ease-in-out infinite;
+}
+
+.add-cart i {
+  font-size: 20px;
+  margin-bottom: 0;
+}
+
+.add-cart:hover {
+  transform: scale(1.1);
+  background: #d34c2a;
+  color: #fff;
+}
+
+/* ふわふわ浮くアニメーション */
+@keyframes floating {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}

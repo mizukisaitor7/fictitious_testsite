@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- css -->
+  <link rel="stylesheet" href="style.css">
+  <!-- fontawesome -->
+  <script src="https://kit.fontawesome.com/2014b64af7.js" crossorigin="anonymous"></script>
+  <!-- googlefonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Meow+Script&family=Zen+Maru+Gothic&display=swap"
+    rel="stylesheet">
+  <title>イノコバデリ</title>
+</head>
+
+<body id="top">
+
+  <header class="site-header">
+    <div class="header-top">
+      <div class="header-inner">
+        <h1 class="logo">
+          <a href="index.html"><img src="img/logo.png" alt="イノコバデリ 猪子場食品の宅配サービス"></a>
+        </h1>
+
+        <div class="header-top-right">
+          <div class="user-actions">
+            <a href="#" class="btn-login"><i class="fa-solid fa-cart-shopping"></i>ご注文・ログイン</a>
+            <a href="#" class="link-text">お問い合わせ</a>
+            <a href="#" class="link-text">FAQ</a>
+          </div>
+          <!-- 検索フォーム -->
+          <form action="/search" method="GET" class="search-area">
+            <div class="search-input-container">
+              <input type="text" name="zipcode" placeholder="お届け先の郵便番号検索" class="input-field">
+              <button type="submit" class="btn-search-submit">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+            </div>
+
+            <p class="delivery-info">新潟・三条・長岡地域<br>配送承ります。</p>
+          </form>
+
+        </div>
+      </div>
+    </div>
+
+    <nav class="header-nav">
+
+      <!-- ハンバーガー格納用素材 -->
+      <input type="checkbox" id="nav-input" class="nav-unshown">
+
+      <label for="nav-input" class="hamburger-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <ul class="nav-list">
+        <li class="sp-only-actions">
+          <a href="#" class="btn-login-sp"><i class="fa-solid fa-cart-shopping"></i>ご注文・ログイン</a>
+          <div class="sp-sub-links">
+            <a href="#">お問い合わせ</a>
+            <a href="#">FAQ</a>
+          </div>
+        </li>
+        <!-- ここまで -->
+
+        <li><a href="index.html">ホーム</a></li>
+        <li><a href="#">はじめての方へ</a></li>
+        <li><a href="#" class="text-orange">ミールキット</a></li>
+        <li><a href="#" class="text-green">弁当・オードブル</a></li>
+        <li><a href="#">資料請求</a></li>
+        <li class="nav-trial" id="poyopoyo">
+          <a href="single.html"><img src="img/cp_btn.png" alt="初回限定！お試し5日セット"></a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- frontpage-kcarouselslider -->
+  <div class="css-carousel-slider">
+    <div class="slide-wrap-main">
+      <div class="slide"><a href="#"><img src="img/banner01.png" alt="イノコバのミールキット5日間お試しキャンペーン"></a></div>
+    </div>
+    <div class="slide-wrap">
+      <!-- スライド画像 -->
+      <div class="slide"><a href="single.html"><img src="img/banner01.png" alt="イノコバのミールキット5日間お試しキャンペーン"></a></div>
+      <div class="slide"><a href="#"><img src="img/banner07.png" alt="お友達紹介キャンペーン"></a></div>
+      <div class="slide"><a href="#"><img src="img/banner02.png" alt="イノコバのミールキット"></a></div>
+      <div class="slide"><a href="#"><img src="img/banner03.png" alt="イノコバのデリバリー"></a></div>
+    </div>
+  </div>
+
+  <!-- main -->
+  <main>
+
+    <!-- section01 -->
+    <section class="menu">
+
+      <div class="card_container">
+        <!-- card01 -->
+        <div class="card" id="animation">
+
+          <div class="card_subtitle">
+            <h3><img src="img/line01.png"><span>時短×きちんとごはん</span><img src="img/line02.png"></h3>
+          </div>
+          <h2 class="card_title meal_title">ミールキット</h2>
+          <div class="card_pic"><img src="img/mealbox.png" alt="ミールキット"></div>
+          <div class="card_content">
+            <p class="text">カット食材と調味料がセットになった<span>ミールキット</span>を平日毎日お届け。<br>鍵付き保冷BOXでの置き配に対応。</p>
+          </div>
+          <div class="card_tag_container">
+            <ul class="card_tag">
+              <li class="tag">地場食材</li>
+              <li class="tag">定期配送</li>
+              <li class="tag">置き配対応</li>
+              <li class="tag">ご自宅で調理</li>
+            </ul>
+          </div>
+          <div class="card_btn">
+            <a href="#" class="btn-more btncolor1">くわしくみる<i class="fa-solid fa-circle-chevron-right"></i></a>
+            <a href="#" class="btn-pink">ネットでご注文<i class="fa-solid fa-desktop"></i></a>
+            <a href="#" class="btn-pink">お電話でご注文&phone;</a>
+          </div>
+        </div>
+
+
+        <!-- card02 -->
+        <div class="card" id="animation">
+
+          <div class="card_subtitle">
+            <h3><img src="img/line03.png"><span>手軽×ごちそう弁当</span><img src="img/line04.png"></h3>
+          </div>
+          <h2 class="card_title deli_title">デリバリー</h2>
+          <div class="card_pic"><img src="img/bento.png" alt="宅配弁当"></div>
+          <div class="card_content">
+            <p class="text">当店自慢の<span>お弁当・オードブル</span>をご自宅までお届けします。<br>ご予約はネット・お電話で承ります。</p>
+          </div>
+          <div class="card_tag_container">
+            <ul class="card_tag">
+              <li class="tag">地場食材</li>
+              <li class="tag">予約注文</li>
+              <li class="tag">当日予約可</li>
+              <li class="tag">調理済み総菜</li>
+            </ul>
+          </div>
+          <div class="card_btn">
+            <a href="#" class="btn-more btncolor2">くわしくみる<i class="fa-solid fa-circle-chevron-right"></i></a>
+            <a href="#" class="btn-green">ネットでご注文<i class="fa-solid fa-desktop"></i></a>
+            <a href="#" class="btn-green">お電話でご注文&phone;</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- section02 -->
+    <section class="concept">
+      <h2 class="sectiontitle">
+        <span class="text-smallpink">イノコバの</span>ミールキット<span class="text-gray">で<br>毎日の献立の悩みを解決して、心にゆとり</span>
+      </h2>
+      <div class="concept_pic_container">
+        <div class="concept_pic"><img src="img/nayami.png" alt="子育て世代のお悩みも…"></div>
+        <div class="concept_pic"><img src="img/kaiketu.png" alt="ミールキットで解決！"></div>
+      </div>
+    </section>
+
+    <!-- section03 -->
+    <section class="meal_menu">
+      <h2 class="sectiontitle">選べる3つのコース</h2>
+      <div class="card_container mealkit_card">
+
+        <!-- card01 -->
+        <div class="card_set">
+          <div class="card">
+            <div class="course_subtitle">
+              <h3 class="subtitlecolor1">ミールキット</h3>
+            </div>
+            <h2 class="course_title titlecolor1">スタンダードコース</h2>
+            <div class="card_pic"><img src="img/meal01.png" alt="ミールキットスタンダードコース"></div>
+            <div class="card_content">
+              <p class="text">新潟県産食材をふんだんに使用した、和・洋・中のお料理をお楽しみいただけるオススメのコースです。</p>
+            </div>
+            <div class="card_tag_container">
+              <ul class="card_tag">
+                <li class="tag">地場食材</li>
+                <li class="tag">和食</li>
+                <li class="tag">洋食</li>
+                <li class="tag">中華</li>
+                <li class="tag">週１～５日配送</li>
+                <li class="tag">置き配対応</li>
+              </ul>
+            </div>
+            <div class="card_btn">
+              <a href="#" class="btn-more btncolor3">くわしくみる<i class="fa-solid fa-circle-chevron-right"></i></a>
+            </div>
+          </div>
+
+          <!-- review01 -->
+          <div class="review">
+            <div class="balloon">
+              <div class="review_title">
+                <h4>お客様の声</h4>
+                <small class="review_sub">Customer review.</small>
+              </div>
+              <div class="Customer">
+                <img src="img/koe1.png" alt="">
+                <p>30代/女性/会社員</p>
+              </div>
+              <div class="review_content">
+                <p>夕方買い物に行く手間がなくなり、便利です。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- card02 -->
+        <div class="card_set">
+          <div class="card">
+            <div class="course_subtitle">
+              <h3 class="subtitlecolor2">ミールキット</h3>
+            </div>
+            <h2 class="course_title titlecolor2">ぐんぐんコース</h2>
+            <div class="card_pic"><img src="img/meal02.png" alt="ミールキットぐんぐんコース"></div>
+            <div class="card_content">
+              <p class="text">お子様に必要な栄養を考えた、管理栄養士監修の
+                メニュー！ご家族みんなで楽しめる、マイルドで食べやすい味つけです。
+              </p>
+            </div>
+            <div class="card_tag_container">
+              <ul class="card_tag">
+                <li class="tag">地場食材</li>
+                <li class="tag">和食</li>
+                <li class="tag">洋食</li>
+                <li class="tag">中華</li>
+                <li class="tag">週１～５日配送</li>
+                <li class="tag">置き配対応</li>
+              </ul>
+            </div>
+            <div class="card_btn">
+              <a href="#" class="btn-more btncolor4">くわしくみる<i class="fa-solid fa-circle-chevron-right"></i></a>
+            </div>
+          </div>
+
+          <!-- review01 -->
+          <div class="review">
+            <div class="balloon">
+              <div class="review_title">
+                <h4>お客様の声</h4>
+                <small class="review_sub">Customer review.</small>
+              </div>
+              <div class="Customer">
+                <img src="img/koe2.png" alt="">
+                <p>30代/男性/自営業</p>
+              </div>
+              <div class="review_content">
+                <p>簡単に作れるうえ、子どもたちにも好評です。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- card03 -->
+        <div class="card_set">
+          <div class="card">
+            <div class="course_subtitle">
+              <h3 class="subtitlecolor3">ミールキット</h3>
+            </div>
+            <h2 class="course_title titlecolor3">和食コース</h2>
+            <div class="card_pic"><img src="img/meal03.png" alt="ミールキット和食コース"></div>
+            <div class="card_content">
+              <p class="text">
+                手間のかかる和食をもっと気軽に。新潟県産食材をふんだんに使用したこだわりのメニューをご賞味ください。
+              </p>
+            </div>
+            <div class="card_tag_container">
+              <ul class="card_tag">
+                <li class="tag">地場食材</li>
+                <li class="tag">和食</li>
+                <li class="tag">週１～５日配送</li>
+                <li class="tag">置き配対応</li>
+              </ul>
+            </div>
+            <div class="card_btn">
+              <a href="#" class="btn-more btncolor5">くわしくみる<i class="fa-solid fa-circle-chevron-right"></i></a>
+            </div>
+          </div>
+
+          <!-- review01 -->
+          <div class="review">
+            <div class="balloon">
+              <div class="review_title">
+                <h4>お客様の声</h4>
+                <small class="review_sub">Customer review.</small>
+              </div>
+              <div class="Customer">
+                <img src="img/koe3.png" alt="">
+                <p>60代/女性/主婦</p>
+              </div>
+              <div class="review_content">
+                <p>明解なレシピで、新しい料理に挑戦できます。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- section4 -->
+    <section class="fee">
+
+      <h2 class="sectiontitle">料金プラン</h2>
+      <div class="fee_innner">
+        <p>お届け日数と曜日をお選びいただけます。</p>
+        <p class="fee_red"><img src="img/line01.png">注文日数が多いほど<span>おトク</span>に！<img src="img/line02.png"></p>
+        <h4>１セットあたり価格（送料込・税込）</h4>
+      </div>
+
+      <div class="fee_set_container">
+        <div class="fee_set">
+          <p><span>３</span>人用</p>
+          <img class="family" src="img/family_3.png" alt="">
+          <div class="pricelist">
+
+            <div class="price_item">
+              <span class="price_label">週1日</span>
+              <span class="price_val">1,920円</span>
+            </div>
+            <div class="price_item">
+              <span class="price_label">週2-3日</span>
+              <span class="price_val text-red">1,860円</span>
+              <div class="discount_tag tagcolor1"><span class="discount_bold">60</span>円おトク!</div>
+            </div>
+            <div class="price_item">
+              <span class="price_label">週4日〜</span>
+              <span class="price_val text-red">1,800円</span>
+              <div class="discount_tag tagcolor2"><span class="discount_bold">60</span>円おトク!</div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="fee_set">
+          <p><span>４</span>人用</p>
+          <img class="family" src="img/family_4.png" alt="">
+
+          <div class="pricelist">
+            <div class="price_item">
+              <span class="price_label">週1日</span>
+              <span class="price_val">2,580円</span>
+            </div>
+            <div class="price_item">
+              <span class="price_label">週2-3日</span>
+              <span class="price_val text-red">2,490円</span>
+              <div class="discount_tag tagcolor1"><span class="discount_bold">90</span>円おトク!</div>
+            </div>
+            <div class="price_item">
+              <span class="price_label">週4日〜</span>
+              <span class="price_val text-red">2,400円</span>
+              <div class="discount_tag tagcolor2"><span class="discount_bold">90</span>円おトク!</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="fee_btn">
+        <a href="#" class="btn-more btncolor6">くわしくみる<i class="fa-solid fa-circle-chevron-right"></i></a>
+      </div>
+    </section>
+
+    <!-- バナー -->
+    <div class="banner_container">
+      <div class="cp_banner">
+        <a href="single.html"><img src="img/banner06.png" alt="ミールキットお試しセット"></a>
+      </div>
+      <div class="cp_banner">
+        <a href="#"><img src="img/banner08.png" alt="紹介キャンペーン"></a>
+      </div>
+    </div>
+
+    <!-- section5 -->
+    <section class="area">
+      <div class="area_container">
+
+        <div class="area_info">
+          <div class="area_map"><img src="img/niigata_map.png" alt="map"></div>
+        </div>
+
+        <div class="area_info area_text">
+
+          <div class="area_deli">
+            <h2 class="area_title"><i class="fa-solid fa-location-dot"></i>配送エリア</h2>
+            <p><span>新潟市、三条市、燕市、加茂市、見附市、長岡市</span><br>※上記エリア外への配送はお電話にてご相談ください。</p>
+            <a class="btn-pink btn-tel" href="#">お問い合わせ&phone;</a>
+          </div>
+
+          <div class="area_deli">
+            <h2 class="area_title"><i class="fa-solid fa-clock"></i>配送可能時間</h2>
+            <table class="time_deli">
+              <tr>
+                <th>月～土曜日</th>
+                <td>10:00～18:00</td>
+              </tr>
+              <tr>
+                <th>日曜・祝日</th>
+                <td>配達を承っておりません。</td>
+              </tr>
+            </table>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- バナー -->
+    <div class="banner_container_2">
+      <div class="column_banner">
+        <a href="#"><img src="img/banner05.png" alt="猪子場食育相談室第3回「こどものおやつ、どうしてる？」"></a>
+      </div>
+      <div class="column_banner">
+        <a href="#"><img src="img/banner04.png" alt="にいがた食応援プロジェクト"></a>
+      </div>
+    </div>
+
+    <section class="news">
+      <h2 class="sectiontitle">新着情報</h2>
+      <div class="newsList">
+        <dl>
+          <dt>2026/02/20<a href="#" class="new_news">お知らせ</a></dt>
+          <dd>サイトリニューアルのお知らせ</dd>
+          <dt>2026/01/30<a href="#" class="new_menu">メニュー</a></dt>
+          <dd>２月新商品のご紹介</dd>
+          <dt>2026/01/04<a href="#" class="new_column">コラム</a></dt>
+          <dd>新年あけましておめでとうございます</dd>
+          <dt>2025/12/26<a href="#" class="new_menu">メニュー</a></dt>
+          <dd>１月新商品のご紹介</dd>
+          <dt>2025/12/20<a href="#" class="new_news">お知らせ</a></dt>
+          <dd>年末年始休業日のご案内</dd>
+          <dt>2025/11/30<a href="#" class="new_menu">メニュー</a></dt>
+          <dd>１２月新商品のご紹介</dd>
+        </dl>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- footer -->
+  <footer class="footer">
+
+    <div class="footer_inner">
+      <div class="footer_link">
+        <div class="mealkit_link">
+          <img class="footer_icon" src="img/mealkit_icon.png" alt="">
+          <p><span>イノコバの</span><br>ミールキット</p>
+        </div>
+        <div class="delivery_link">
+          <img class="footer_icon" src="img/deli_icon.png" alt="">
+          <p><span>イノコバの</span><br>お弁当・<br>オードブル</p>
+        </div>
+      </div>
+
+      <div class="footer_content">
+        <h1 class="footer_logo">
+          <div class="logo"><a href="index.html"><img src="img/logo.png" alt="イノコバデリ 猪子場食品の宅配サービス"></a></div>
+        </h1>
+
+        <div class="footer_adress">
+          <ul>
+            <li>猪子場食品株式会社</li>
+            <li>&#12306;959-1151</li>
+            <li>新潟県三条市猪子場新田109</li>
+            <li>&phone;0256-41-1300</li>
+            <li>代表　鹿野輿太</li>
+          </ul>
+        </div>
+
+        <div class="footer_nav">
+          <ul>
+            <li><a href="#"><i class="fa-solid fa-angle-right" style="color: #666666;"></i>個人情報保護について</a></li>
+            <li><a href="#"><i class="fa-solid fa-angle-right" style="color: #666666;"></i>特定商取引法に基づく表記</a></li>
+            <li><a href="#"><i class="fa-solid fa-angle-right" style="color: #666666;"></i>マイページ利用規程</a></li>
+            <li><a href="#"><i class="fa-solid fa-angle-right" style="color: #666666;"></i>イノコバデリ宅配規程</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer_sns">
+        <ul>
+          <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-line"></i></a></li>
+          <li><a href="#"><i class="fa-solid fa-arrow-up-from-bracket"></i></a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer_copyright">
+      <small>&copy; InocobaFoods All rights reserved.</small>
+    </div>
+    </div>
+
+  </footer>
+    <!-- 購入ボタン -->
+<a href="#" class="add-cart"><i class="fa-solid fa-cart-shopping"></i><br>ご注文・<br>ログイン</a>
+  <!-- toTOP -->
+  <a class="pagetop" href="#top"><i class="fa-solid fa-angle-up" style="color: #ffffff;"></i>
+    <p>TOP</p>
+  </a>
+
+</body>
+
+</html>
