@@ -7,6 +7,7 @@ body { margin: 0;
   background-position: center;
   background-repeat: repeat;
   background-size: 100% auto;
+      height: 100vh;
   /* background-attachment: fixed; */
 }
 ul { list-style: none; margin: 0; padding: 0; }
