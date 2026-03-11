@@ -1102,6 +1102,9 @@ html {
     gap: 40px;
     max-width: 350px; /* スマートフォンで広がりすぎないように制限 */
   }
+  .price_label{
+  font-size:0.7rem;
+  }
 }
 
 
