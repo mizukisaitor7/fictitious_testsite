@@ -1177,7 +1177,7 @@ html {
     /* grid-template-columns を 1列(1fr) に変更 */
     grid-template-columns: 1fr;
     /* カード最大幅を指定 */
-    max-width: 100%;
+    max-width: 350px;
     margin: 0 auto;
   }
 }
@@ -1189,7 +1189,7 @@ html {
   align-items: center;
 }
 .column_banner img{
-width: 90% ;
+width: 300px;
 height: auto;
 }
 /* mobile */
