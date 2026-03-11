@@ -1101,6 +1101,9 @@ html {
     gap: 40px;
     max-width: 350px; /* スマートフォンで広がりすぎないように制限 */
   }
+  .pricelist {
+    width:350px;
+  }
 }
 
 
