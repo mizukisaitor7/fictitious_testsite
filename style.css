@@ -237,7 +237,7 @@ a { text-decoration: none; color: #666666; }
     top: 0;
     right: -100%;
     width: 100%; /* 画面いっぱい */
-    height: 100vh;
+    height: 120vh;
     background: #fff;
     flex-direction: column;
     justify-content: center;
