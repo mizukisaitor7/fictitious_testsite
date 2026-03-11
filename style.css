@@ -1176,7 +1176,7 @@ html {
     /* grid-template-columns を 1列(1fr) に変更 */
     grid-template-columns: 1fr;
     /* カード最大幅を指定 */
-    max-width: 350px;
+    max-width: 100%;
     margin: 0 auto;
   }
 }
