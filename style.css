@@ -1109,6 +1109,9 @@ html {
   font-size:0.7rem;
     padding: 2px 5px;
   }
+  .fee_red span{
+  font-size: 1.2rem;
+}
 }
 
 
